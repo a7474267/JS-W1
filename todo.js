@@ -40,7 +40,7 @@ function render() {
 <div class="d-flex">
 <div class="form-check">
 <input type="checkbox" class="form-check-input" ${item.completed ? 'checked' : ''} data-action="complete" data-id="${item.id}">
-<label class="form-check-label ${item.completed ? 'completed' : ''}" data-action="complete" data-id="${item.id}"> ${item.title}</label>
+<label class="form-check-label ${item.completed ? 'completed' : ''}" data-action="complete" data-id="${item.id}">${item.title}</label>
 </div>
 <button type="button" class="close ml-auto" aria-label="Close">
 <span aria-hidden="true" data-action="remove" data-id="${item.id}">&times;</span>
@@ -65,7 +65,7 @@ function remove(e) {
   }
 }
 function enterKey(e) {
-  if (e.keycode == 13) {
+  if (e.keyCode == 13) {
     addData();
   }
 };
